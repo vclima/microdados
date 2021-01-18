@@ -47,6 +47,7 @@ df_private.NU_NOTA_MT.hist(bins=75,range=[0,1000],alpha=0.7,label='Escolas Priva
 plt.vlines(df.NU_NOTA_MT.mean(),0,25,color='r',label='Média')
 plt.title('Matemática - 2019')
 plt.legend()
+#plt.show()
 
 print(df_private.shape)
 print(df_public.shape)
