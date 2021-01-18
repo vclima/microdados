@@ -3,7 +3,7 @@ import numpy as np
 
 
 m=[]
-fpath='MD_18/DADOS/MICRODADOS_ENEM_2018.csv'
+fpath='MD_19/DADOS/MICRODADOS_ENEM_2019.csv'
 counter=0
 pos=0
 with open(fpath,newline='') as csv_file:
@@ -13,13 +13,13 @@ with open(fpath,newline='') as csv_file:
             m.append(row)
             counter += 1        
         else:
-            if row[20]=='35136098':
+            if row[22]=='Mogi Guaçu':
                 m.append(row)
                 counter += 1
         pos += 1
 print(len(m))
 microdados=np.array(m)
 
-dump_file=open('educar.npy','wb')
+dump_file=open('2019.npy','wb')
 np.save(dump_file,microdados)
 dump_file.close()
